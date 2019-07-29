@@ -1,0 +1,53 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## SARB Quarterly Bulletin Data - Current Release
+
+This R package provides convenient access to the current data that accompanies the South African Reserve Bank Quarterly Bulletin. Variables that are of the same frequency have been converted to `tibble` format and have been saved as `.RData` files. The names for each of these files is as follows:
+
+- "sarb_annual.RData"
+- "sarb_quarter.RData"
+- "sarb_month.RData"
+- "sarb_week.RData"
+- "sarb_day.RData"
+
+Note that the weekly data has also been converted into monthly data for your convenience.
+
+The most recent description file that is provided by the SARB has been saved in the "data-raw" sub-folder. It is included in both original `.xlsx` and converted `.rds` format. The layout is consistent with the way in which this data is provided.
+
+## Installation
+
+To install the repository from GitHub:
+
+```R
+# install.packages("devtools")
+devtools::install_github("KevinKotze/sarbQB")
+```
+
+## Usage
+
+To view all of the data objects that are included in the package: 
+
+```{r echo=TRUE, eval=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+library(sarbQB)
+data(package = 'sarbQB')
+```
+
+To look at how the data has been stored, where the column headers relate to each of the alpha-numeric codes that are used by the SARB. The first column is reserved for the date, which was created with the `lubridate` package.
+
+```{r echo=TRUE, eval=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+library(tidyverse)
+sarb_quarter %>% 
+  select(1:5) %>% 
+  tail()
+```
