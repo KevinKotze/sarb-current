@@ -3,6 +3,8 @@
 
 ## SARB Quarterly Bulletin Data - Current Release
 
+*\<last updated on 2019-07-29\>*
+
 This R package provides convenient access to the current data that
 accompanies the South African Reserve Bank Quarterly Bulletin. Variables
 that are of the same frequency have been converted to `tibble` format
@@ -20,8 +22,8 @@ your convenience.
 
 The most recent description file that is provided by the SARB has been
 saved in the “data-raw” sub-folder. It is included in both original
-`.xlsx` and converted `.rds` format. The layout is consistent with the
-way in which this data is provided.
+`.xlsx` and converted `.RData` format. The layout is consistent with the
+way in which this data is provided (sorry).
 
 ## Installation
 
@@ -55,4 +57,11 @@ sarb_quarter %>%
 
 ## To do
 
-The annual data does not seem to have loaded correctly.
+Include real time datasets.
+
+## Disclaimer
+
+Please note that this is not an official release of data and I’m in no
+way responsible for the results that may be produced using these data
+files. Researchers are encouraged to make use of the official data
+release that is available from the South African Reserve Bank.
