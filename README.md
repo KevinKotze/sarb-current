@@ -5,5 +5,5 @@
 
 *\<last updated on 2019-07-29\>*
 
-See <https://github.com/KevinKotze/sarb-current>
+This is now outdated. See <https://github.com/KevinKotze/sarb-current> for the updated version.
 
